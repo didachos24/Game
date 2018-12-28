@@ -1,11 +1,23 @@
 body{
     background-image : url(../images/background.jpg);
     background-size: 100%;
-
 }
 
-img {
+#gokuimg, #cellimg, #vegetaimg, #frezzerimg {
     height: 150px;
     width: 100px;
-    margin: 10px green solid;
+}
+
+p {
+    font-size: 15px;
+}
+
+#goku, #cell, #vegeta, #frezzer {
+    background-color: silver;
+    padding: 10px;
+    margin: 10px;
+}
+
+.row {
+    justify-content: center;
 }

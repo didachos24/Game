@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Dragon Ball RPG!</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Fruktur" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -21,14 +21,15 @@
     <!-- Container for characters  -->
     <h4>Choose a character</h4>
     <div class = "container">
-        <div class = "row">
-            <div class = "col"><img src = "assets/images/goku.jpg" alt = "Goku" id = "goku" style="margin : 10px red solid"><p>Goku HP: </p></div>
-            <div class = "col"><img src = "assets/images/cell.jpg" alt = "piccolo" id = "cell"><p>Cell HP: </p></div>
-            <div class = "col"><img src = "assets/images/vegeta.jpg" alt = "Vegeta" id = "vegeta"><p>Vegeta HP: </p></div>
-            <div class = "col"><img src = "assets/images/freezer.jpg" alt = "Freezer" id = "freezer"><p>Freezer HP: </p></div>
+        <div class = "row" >
+            <div id = "goku"><img id = "gokuimg"><p id = "goku-HP"></p></div>
+            <div id = "cell"><img id = "cellimg"><p id = "cell-HP"></p> </p></div>
+            <div id = "vegeta"><img id = "vegetaimg"><p id = "vegeta-HP"></p></div>
+            <div id = "frezzer"><img id = "frezzerimg"><p id = "frezzer-HP"></p> </p></div>
         </div>
     </div>
 
+    <!-- After choose the character, enemies will be here -->
     <div id = "enemies"></div>
 
     <div>
@@ -36,6 +37,7 @@
         <button type="button" class="btn btn-light">Attack!</button>
     </div>
 
+    <!-- Here is the opponent to defeat -->
     <div id = "defender">
         <h3>Defender</h3>
     </div>
