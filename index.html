@@ -11,26 +11,30 @@
 <body>
 
     <div>
-        <h1 style = "font-family: Fruktur">Dragon Ball RPG!!!</h1>
+        <h1 style = "font-family: Fruktur; color : white">Dragon Ball RPG!!!</h1>
     </div>
-    
-    <br>
-    <br>
-    <br>
-
+   
     <!-- Container for characters  -->
-    <h4>Choose a character</h4>
-    <div class = "container">
+    <h3>Choose a character</h3>
+    <div id = "character" class = "container">
         <div class = "row" >
-            <div id = "goku"><img id = "gokuimg"><p id = "goku-HP"></p></div>
-            <div id = "cell"><img id = "cellimg"><p id = "cell-HP"></p> </p></div>
-            <div id = "vegeta"><img id = "vegetaimg"><p id = "vegeta-HP"></p></div>
-            <div id = "frezzer"><img id = "frezzerimg"><p id = "frezzer-HP"></p> </p></div>
+            <div id = "goku"><img id = "gokuimg" src = "assets/images/goku.jpg"><p id = "goku-HP"></p></div>
+            <div id = "cell"><img id = "cellimg" src = "assets/images/cell.jpg"><p id = "cell-HP"></p> </p></div>
+            <div id = "vegeta"><img id = "vegetaimg" src = "assets/images/vegeta.jpg"><p id = "vegeta-HP"></p></div>
+            <div id = "frezzer"><img id = "frezzerimg" src = "assets/images/frezzer.jpg"><p id = "frezzer-HP"></p> </p></div>
         </div>
     </div>
 
     <!-- After choose the character, enemies will be here -->
-    <div id = "enemies"></div>
+    <div id = "enemies" class = "container">
+        <h3>Enemies</h3>
+        <div class = "row" >
+            <div id = "goku"><img id = "gokuimg" src = "assets/images/goku.jpg"><p id = "goku-HP"></p></div>
+            <div id = "cell"><img id = "cellimg" src = "assets/images/cell.jpg"><p id = "cell-HP"></p> </p></div>
+            <div id = "vegeta"><img id = "vegetaimg" src = "assets/images/vegeta.jpg"><p id = "vegeta-HP"></p></div>
+            <div id = "frezzer"><img id = "frezzerimg" src = "assets/images/frezzer.jpg"><p id = "frezzer-HP"></p> </p></div>
+        </div>
+    </div>
 
     <div>
         <h3>Fight Section</h3>
@@ -40,6 +44,15 @@
     <!-- Here is the opponent to defeat -->
     <div id = "defender">
         <h3>Defender</h3>
+
+        <div class = "container">
+                <div class = "row" >
+                    <div id = "goku"><img id = "gokuimg" src = "assets/images/goku.jpg"><p id = "goku-HP"></p></div>
+                    <div id = "cell"><img id = "cellimg" src = "assets/images/cell.jpg"><p id = "cell-HP"></p> </p></div>
+                    <div id = "vegeta"><img id = "vegetaimg" src = "assets/images/vegeta.jpg"><p id = "vegeta-HP"></p></div>
+                    <div id = "frezzer"><img id = "frezzerimg" src = "assets/images/frezzer.jpg"><p id = "frezzer-HP"></p> </p></div>
+                </div>
+            </div>
     </div>
 
 <script src="assets/javascript/game.js"></script>

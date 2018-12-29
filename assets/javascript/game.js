@@ -38,17 +38,27 @@ var vegeta = {
     src : "assets/images/vegeta.jpg",
 }
 
-// Display pictures and HP from objects
+// Display HP from objects
 function characters () {
-    $("#gokuimg").attr("src", goku.src); $("#goku-HP").text("Goku HP: " + goku.HP);
-    $("#cellimg").attr("src", cell.src); $("#cell-HP").text("Cell HP: " + cell.HP);
-    $("#vegetaimg").attr("src", vegeta.src); $("#vegeta-HP").text("Vegeta HP: " + vegeta.HP);
-    $("#frezzerimg").attr("src", frezzer.src); $("#frezzer-HP").text("Frezzer HP: " + frezzer.HP);
-}
+    $("p#goku-HP").text("Goku HP: " + goku.HP);
+    $("p#cell-HP").text("Cell HP: " + cell.HP);
+    $("p#vegeta-HP").text("Vegeta HP: " + vegeta.HP);
+    $("p#frezzer-HP").text("Frezzer HP: " + frezzer.HP);
+    }
 
 characters();
 
-// Choose a character and move others
-attacker = $("img").on("click", function() {
-    console.log(attacker);
-})
+// Choose a character and move others to enemies zone
+    switch(function selection1(onclick) {
+        case #goku:
+        attacker = goku;
+        // For all different character, show in enemies zone changing visibility
+        $("#character,#cell").css("visibility : hiden")
+            
+        }
+    })
+
+// Choose an enemie and move him to defender zone
+
+// Set attack button
+ 
