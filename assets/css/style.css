@@ -12,7 +12,11 @@ p {
     font-size: 15px;
 }
 
-#goku, #cell, #vegeta, #frezzer {
+img {
+    visibility: inherit;
+}
+
+#goku, #cell, #vegeta, #frezzer, #goku2, #cell2, #vegeta2, #frezzer2, #goku3, #cell3, #vegeta3, #frezzer3 {
     background-color: silver;
     padding: 10px;
     margin: 10px;
