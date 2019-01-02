@@ -40,10 +40,11 @@ var vegeta = {
 
 // Display HP
 function characters () {
-    $("#goku-HP, #goku2-HP, #goku3-HP").html("Goku HP: " + goku.HP);
-    $("#cell-HP, #cell2-HP, #cell3-HP").html("Cell HP: " + cell.HP);
-    $("#vegeta-HP, #vegeta2-HP, #vegeta3-HP").html("Vegeta HP: " + vegeta.HP);
-    $("#frezzer-HP, #frezzer2-HP, #frezzer3-HP").html("Frezzer HP: " + frezzer.HP);
+    $("#goku-HP, #goku2-HP").html("Goku HP: " + goku.HP);
+    $("#cell-HP, #cell2-HP").html("Cell HP: " + cell.HP);
+    $("#vegeta-HP, #vegeta2-HP").html("Vegeta HP: " + vegeta.HP);
+    $("#frezzer-HP, #frezzer2-HP").html("Frezzer HP: " + frezzer.HP);
+    $("#defender").html(defender)
     }
 
 characters();
@@ -84,11 +85,13 @@ characters();
     console.log(attacker);
 // Choose an enemy and move him to defender zone
 
+    // Function that rewrite index for defender zone
     function enemy () {
-        $("#defender").html("<div><img src =" + defender.src + "><p>" + defender.name +" HP: " + defender.HP + "</p></div>");
+        $("#defender").html('<div><img src =' + defender.src + '><p>' + defender.name +' HP: ' + defender.HP + '</p></div>');
+        $("#defender").css("visibility", "visible")
         console.log(defender);
-
     }
+
 
     $("#goku2").click( function() {
         defender = goku;
@@ -97,20 +100,21 @@ characters();
     })
 
     $("#cell2").click( function() {
-        if(defener = {}) {
         defender = cell;
         $("#cell2").css("visibility", "hidden")
-        }
+        enemy();
     })
 
     $("#vegeta2").click( function() {
         defender = vegeta;
         $("#vegeta2").css("visibility", "hidden")
+        enemy();
     })
 
     $("#frezzer2").click( function() {
         defender = frezzer;
         $("#frezzer2").css("visibility", "hidden")
+        enemy();
     })
 
 // Set attack button
@@ -119,8 +123,14 @@ characters();
         attacker.HP -= defender.defend;
         defender.HP -= attacker.attack;
         characters();
-        if (defender.HP = 0) {
+        enemy();
+        if (attacker.HP <= 0) {
+            alert("Game Over!!!");
+            refresh();
+        }
+        if (defender.HP <= 0) {
+            $("#defender").hide();
+            attacker.HP += 20;
             defender = {};
-
         }
     })

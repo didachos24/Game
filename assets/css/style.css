@@ -3,7 +3,7 @@ body{
     background-size: 100%;
 }
 
-#gokuimg, #cellimg, #vegetaimg, #frezzerimg {
+img {
     height: 120px;
     width: 90px;
 }
@@ -16,7 +16,7 @@ img {
     visibility: inherit;
 }
 
-#goku, #cell, #vegeta, #frezzer, #goku2, #cell2, #vegeta2, #frezzer2, #goku3, #cell3, #vegeta3, #frezzer3 {
+#goku, #cell, #vegeta, #frezzer, #goku2, #cell2, #vegeta2, #frezzer2, #defender {
     background-color: silver;
     padding: 10px;
     margin: 10px;
