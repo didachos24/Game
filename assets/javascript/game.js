@@ -2,6 +2,7 @@ $(document).ready();
 // Variables
 attacker = {};
 defender = {};
+enemiesToDefeat = 3;
 
 
 // Define each character as an object where is allocated 
@@ -82,11 +83,11 @@ characters();
         $("#enemies").css("visibility","visible");
         $("#frezzer2").css("visibility", "hidden");
     })
-    console.log(attacker);
 // Choose an enemy and move him to defender zone
 
     // Function that rewrite index for defender zone
     function enemy () {
+        $("#defender").show();
         $("#defender").html('<div><img src =' + defender.src + '><p>' + defender.name +' HP: ' + defender.HP + '</p></div>');
         $("#defender").css("visibility", "visible")
         console.log(defender);
@@ -124,13 +125,19 @@ characters();
         defender.HP -= attacker.attack;
         characters();
         enemy();
+
         if (attacker.HP <= 0) {
             alert("Game Over!!!");
-            refresh();
+            location.reload();
         }
+
         if (defender.HP <= 0) {
             $("#defender").hide();
             attacker.HP += 20;
             defender = {};
+            enemiesToDefeat -= 1;
+            if(enemiesToDefeat <=0){
+                alert("Congratulations! You are the tournament winner!!!");
+            }
         }
     })
